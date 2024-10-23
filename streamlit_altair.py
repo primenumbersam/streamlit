@@ -12,6 +12,7 @@ Original file is located at
 import streamlit as st
 
 import altair as alt
+import numpy as np
 import pandas as pd
 
 # Sample monthly Stock data (GOOG, APPL, AMZN, IBM, MSFT) from 2004 to 2010
