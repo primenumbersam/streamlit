@@ -217,36 +217,26 @@
             const listElement = document.getElementById('dynamic-project-list');
             const targetDir = './product-detail/';
             
-            try {
-                const response = await fetch(targetDir);
-                const text = await response.text();
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(text, 'text/html');
-                const links = Array.from(htmlDoc.querySelectorAll('a'));
-                
-                const htmlFiles = links
-                    .map(link => link.getAttribute('href'))
-                    .filter(href => {
-                        if (!href || !href.endsWith('.html')) return false;
-                        const fileName = href.split('/').pop();
-                        return fileName !== 'index.html';
-                    });
+            // NOTE: GitHub Pages does not allow directory scraping.
+            // We explicitly list the experiment logs here.
+            const htmlFiles = [
+                'laundry_detergent.html',
+                'multipurpose_cleaner.html',
+                'fabric_softener.html',
+                'dishwashing_liquid.html'
+            ];
 
-                if (htmlFiles.length === 0) {
-                    listElement.innerHTML = '<li>NO SUPPLEMENTARY LOGS FOUND</li>';
-                    return;
-                }
-
-                listElement.innerHTML = htmlFiles
-                    .map(file => {
-                        const fileName = file.split('/').pop();
-                        return `<li><a href="${targetDir}${fileName}">> ${fileName.replace('.html', '').toUpperCase()}</a></li>`;
-                    })
-                    .join('');
-            } catch (error) {
-                console.error('Fetch error:', error);
-                listElement.innerHTML = '<li>DIRECTORY LISTING RESTRICTED</li>';
+            if (htmlFiles.length === 0) {
+                listElement.innerHTML = '<li>NO SUPPLEMENTARY LOGS FOUND</li>';
+                return;
             }
+
+            listElement.innerHTML = htmlFiles
+                .map(file => {
+                    const fileName = file.split('/').pop();
+                    return `<li><a href="${targetDir}${fileName}">> ${fileName.replace('.html', '').replace(/_/g, ' ').toUpperCase()}</a></li>`;
+                })
+                .join('');
         }
 
         window.addEventListener('DOMContentLoaded', fetchProjectLogs);
