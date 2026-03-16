@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITSAM // UI EXPERIMENTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bauhaus-red: #E63946;
+            --bauhaus-yellow: #FFB703;
+            --bauhaus-blue: #1D3557;
+            --bauhaus-black: #111111;
+            --bauhaus-white: #F1FAEE;
+            --border-thick: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bauhaus-white);
+            color: var(--bauhaus-black);
+            line-height: 1.2;
+            overflow-x: hidden;
+        }
+
+        /* Bauhaus Grid Background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: 
+                linear-gradient(var(--bauhaus-black) 1px, transparent 1px),
+                linear-gradient(90deg, var(--bauhaus-black) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        header {
+            padding: 2rem;
+            border-bottom: var(--border-thick) solid var(--bauhaus-black);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-size: 5vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.8;
+        }
+
+        .accent-box {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bauhaus-red);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-left: var(--border-thick) solid var(--bauhaus-black);
+        }
+
+        section {
+            padding: 2rem;
+            border-right: var(--border-thick) solid var(--bauhaus-black);
+            border-bottom: var(--border-thick) solid var(--bauhaus-black);
+        }
+
+        .hero {
+            grid-column: span 2;
+            background-color: var(--bauhaus-yellow);
+        }
+
+        .manifesto {
+            grid-column: span 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .experiment-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            min-height: 300px;
+        }
+
+        .experiment-card:hover {
+            background-color: var(--bauhaus-blue);
+            color: var(--bauhaus-white);
+        }
+
+        .experiment-card h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .geometric-shape {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border: var(--border-thick) solid currentColor;
+        }
+
+        .circle { border-radius: 50%; }
+        .square { background-color: var(--bauhaus-blue); border: none; }
+        .triangle { 
+            width: 0; height: 0; 
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid var(--bauhaus-red);
+            border-top: none;
+        }
+
+        footer {
+            padding: 2rem;
+            background-color: var(--bauhaus-black);
+            color: var(--bauhaus-white);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .hero { grid-column: span 1; }
+            h1 { font-size: 15vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    
+    <header>
+        <h1>Gitsam<br><span style="color: var(--bauhaus-red);">Lab</span></h1>
+        <div class="accent-box"></div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>QUANT HACKER / UI EXPERIMENTS</h2>
+            <p style="margin-top: 2rem; font-size: 1.2rem; max-width: 500px;">
+                Exploration of human-computer interaction using Google Labs tools and vanilla technologies.
+            </p>
+        </section>
+
+        <section class="manifesto">
+            <p>01 FORM FOLLOWS FUNCTION</p>
+            <p>02 DATA IS ART</p>
+            <p>03 NO FRAMEWORKS NEEDED</p>
+        </section>
+
+        <section class="experiment-card" onclick="location.href='#';">
+            <h3>Google<br>Generative UI</h3>
+            <p>Experimenting with dynamic layouts via Gemini API.</p>
+            <div class="geometric-shape circle"></div>
+        </section>
+
+        <section class="experiment-card" onclick="location.href='#';">
+            <h3>Streamlit<br>Data Apps</h3>
+            <p>Rapidly prototyping interactive data dashboards and Python visualizations.</p>
+            <div class="geometric-shape triangle"></div>
+        </section>
+
+        <section class="experiment-card" onclick="location.href='https://21st.dev';">
+            <h3>21st.dev<br>UI Library</h3>
+            <p>Implementing sophisticated design patterns and high-fidelity components.</p>
+            <div class="geometric-shape square"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GITSAM</p>
+        <p>BAUHAUS Art-Style v1.0</p>
+    </footer>
+</body>
+</html>
