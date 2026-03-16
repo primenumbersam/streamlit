@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GITSAM // UI EXPERIMENTS</title>
+    <title>GITSAM | UI EXPERIMENTS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@
         }
 
         h1 {
-            font-size: 5vw;
+            font-size: 3vw;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -2px;
@@ -85,13 +85,6 @@
             background-color: var(--bauhaus-yellow);
         }
 
-        .manifesto {
-            grid-column: span 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
         .experiment-card {
             transition: all 0.3s ease;
             cursor: pointer;
@@ -99,9 +92,13 @@
             min-height: 300px;
         }
 
-        .experiment-card:hover {
+        .experiment-card:not(.no-hover):hover {
             background-color: var(--bauhaus-blue);
             color: var(--bauhaus-white);
+        }
+
+        .experiment-card.no-hover {
+            cursor: default;
         }
 
         .experiment-card h3 {
@@ -152,9 +149,15 @@
         }
 
         @media (max-width: 768px) {
+            header { padding: 1.5rem 1rem; }
+            section { padding: 1.5rem 1rem; }
             .container { grid-template-columns: 1fr; }
-            .hero { grid-column: span 1; }
-            h1 { font-size: 15vw; }
+            .hero, .experiment-card[style*="grid-column: span 3"] { 
+                grid-column: span 1 !important; 
+            }
+            h1 { font-size: 12vw; line-height: 1.1; }
+            .experiment-card { min-height: 200px; }
+            .geometric-shape { width: 40px; height: 40px; bottom: 1rem; right: 1rem; }
         }
     </style>
 </head>
@@ -162,22 +165,24 @@
     <div class="grid-bg"></div>
     
     <header>
-        <h1>Gitsam<br><span style="color: var(--bauhaus-red);">Lab</span></h1>
+        <h1>Gitsam Studio<br><span style="color: var(--bauhaus-red);">Design Lab</span></h1>
         <div class="accent-box"></div>
     </header>
 
     <main class="container">
+
+        <section class="experiment-card no-hover" style="grid-column: span 3; min-height: auto;">
+            <h3>UI Product-Detail</h3>
+            <ul id="dynamic-project-list" class="project-list-container">
+                <li>LOADING LOGS...</li>
+            </ul>
+        </section>
+
         <section class="hero">
             <h2>QUANT HACKER / UI EXPERIMENTS</h2>
             <p style="margin-top: 2rem; font-size: 1.2rem; max-width: 500px;">
                 Exploration of human-computer interaction using Google Labs tools and vanilla technologies.
             </p>
-        </section>
-
-        <section class="manifesto">
-            <p>01 FORM FOLLOWS FUNCTION</p>
-            <p>02 DATA IS ART</p>
-            <p>03 NO FRAMEWORKS NEEDED</p>
         </section>
 
         <section class="experiment-card" onclick="location.href='#';">
@@ -198,12 +203,7 @@
             <div class="geometric-shape square"></div>
         </section>
 
-        <section class="experiment-card" style="grid-column: span 3; min-height: auto;">
-            <h3>Product Details Index</h3>
-            <ul id="dynamic-project-list" class="project-list-container">
-                <li>LOADING LOGS...</li>
-            </ul>
-        </section>
+
 
     </main>
 
