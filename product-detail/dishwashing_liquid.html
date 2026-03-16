@@ -139,23 +139,22 @@
         <!-- ============================================ -->
         <!-- HERO SECTION -->
         <!-- ============================================ -->
-        <section class="relative overflow-hidden bg-pearl" style="min-height: 680px;">
+        <section class="relative overflow-hidden bg-pearl min-h-[550px] md:min-h-[680px]">
             <!-- ▼ EDIT: Hero Background Image Slot. 
            assets 폴더의 이미지를 배경 레이어로 사용할 때 이 부분의 주석을 해제하고 경로를 위치에 맞게 수정하세요.
            (예: style="background-image: url('../assets/HOW_TO_USE_BG.jpg');")  -->
             <!-- <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center mix-blend-multiply" style="background-image: url('../assets/HOW_TO_USE_BG.jpg');"></div> -->
 
             <!-- Hero background: decorative bubbly SVG illustration for Dishwashing Liquid -->
-            <div class="absolute inset-0 z-0 opacity-80 bg-auto bg-center bg-no-repeat mix-blend-multiply"
+            <div class="absolute inset-0 z-0 opacity-80 bg-cover bg-center bg-no-repeat mix-blend-multiply"
                 style="background-image: url('../assets/dishwashing_liquid-hero-1.jpg');"></div>
             <!-- Gradient overlay -->
             <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/80"></div>
             <!-- Hero content -->
-            <div class="relative z-10 flex flex-col items-center justify-center text-center px-8"
-                style="min-height: 680px;">
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20 md:px-8 md:min-h-[680px]">
                 <p class="text-xs tracking-[0.5em] uppercase text-charcoal/80 mb-6 font-body">LAROE Dishwashing Liquid
                 </p>
-                <h1 class="text-4xl font-display font-light leading-tight mb-6 tracking-tight">
+                <h1 class="text-3xl md:text-4xl font-display font-light leading-tight mb-6 tracking-tight">
                     단 한 번의<br />펌핑으로도 충분해요.
                 </h1>
                 <p class="text-sm font-body text-charcoal/60 max-w-md leading-relaxed mb-10">
@@ -163,7 +162,7 @@
                 </p>
                 <!-- Promotion badge -->
                 <div
-                    class="inline-flex items-center gap-3 border border-charcoal/10 px-6 py-3 bg-white/70 backdrop-blur-sm">
+                    class="inline-flex flex-col md:flex-row items-center gap-2 md:gap-3 border border-charcoal/10 px-6 py-4 md:py-3 bg-white/70 backdrop-blur-sm">
                     <span
                         class="text-xs font-body tracking-wider text-charcoal/80 font-semibold text-dustypink-dark">1+1
                         PROMOTION</span>
@@ -182,13 +181,13 @@
         <!-- ============================================ -->
         <!-- PROBLEM SECTION -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-pearl">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-pearl">
             <div class="max-w-2xl mx-auto text-center">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-8 font-body">The Question</p>
-                <h2 class="text-3xl font-display font-normal leading-snug mb-16 italic">
+                <h2 class="text-2xl md:text-3xl font-display font-normal leading-snug mb-12 md:mb-16 italic">
                     설거지가 매번 스트레스였다면
                 </h2>
-                <div class="grid grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
                     <div class="text-left border-t border-charcoal/10 pt-6">
                         <span class="text-4xl font-display font-light text-charcoal/10 block mb-3">01</span>
                         <p class="text-sm font-body text-charcoal/70 leading-relaxed">
@@ -215,12 +214,12 @@
         <!-- ============================================ -->
         <!-- FEATURE 01: INGREDIENTS -->
         <!-- ============================================ -->
-        <section class="py-28 px-8">
+        <section class="py-16 md:py-28 px-6 md:px-8">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-20">
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 01 — Ingredients
                     </p>
-                    <h2 class="text-4xl font-display font-normal leading-snug mb-4">
+                    <h2 class="text-3xl md:text-4xl font-display font-normal leading-snug mb-4">
                         투명한 성분
                     </h2>
                     <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
@@ -228,7 +227,7 @@
                     </p>
                 </div>
 
-                <div class="bg-warmgray/60 p-10 border border-charcoal/5 mb-16">
+                <div class="bg-warmgray/60 p-8 md:p-10 border border-charcoal/5 mb-16">
                     <div class="space-y-6 max-w-lg mx-auto">
                         <div class="flex items-start gap-4">
                             <span
@@ -258,12 +257,12 @@
         <!-- ============================================ -->
         <!-- FEATURE 02: LATHER AND CLEANSE -->
         <!-- ============================================ -->
-        <section class="py-28 px-8 bg-pearl">
+        <section class="py-16 md:py-28 px-6 md:px-8 bg-pearl">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-20">
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 02 — Lather &
                         Cleanse</p>
-                    <h2 class="text-4xl font-display font-normal leading-snug mb-4">
+                    <h2 class="text-3xl md:text-4xl font-display font-normal leading-snug mb-4">
                         풍성한 거품과 빠른 기름 분해
                     </h2>
                     <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
@@ -271,7 +270,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- Left: explanation card -->
                     <div class="bg-white p-8 border border-charcoal/5 flex flex-col justify-center">
                         <div class="space-y-4">
@@ -294,7 +293,7 @@
 
 
                     <!-- Right: lifestyle imagery -->
-                    <div class="flex-1 w-full aspect-square">
+                    <div class="w-full aspect-square md:flex-1">
                         <div class="img-placeholder w-full h-full !border-none" data-placeholder="lather-imagery">
                             <img src="../assets/dishwashing_liquid-1.jpg" alt="Lifestyle"
                                 class="w-full h-full object-cover rounded opacity-80" />
@@ -309,12 +308,12 @@
         <!-- ============================================ -->
         <!-- FEATURE 03: MILDNESS AND SCENT -->
         <!-- ============================================ -->
-        <section class="py-28 px-8">
+        <section class="py-16 md:py-28 px-6 md:px-8">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-16">
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 03 — Mildness &
                         Scent</p>
-                    <h2 class="text-4xl font-display font-normal leading-snug mb-4">
+                    <h2 class="text-3xl md:text-4xl font-display font-normal leading-snug mb-4">
                         맨손 설거지도 촉촉하게, 향기롭게
                     </h2>
                     <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
@@ -322,16 +321,16 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
                     <div
-                        class="flex flex-col items-center text-center p-8 bg-dustypink-light/20 border border-dustypink/20">
+                        class="flex flex-col items-center text-center p-6 md:p-8 bg-dustypink-light/20 border border-dustypink/20">
                         <h4 class="text-xl font-display font-semibold text-charcoal/80 mb-4 italic">Moisturizing</h4>
                         <p class="text-xs font-body text-charcoal/60 leading-relaxed">글리세린 등 식물성 보습 성분 함유로<br />피부 당김을
                             방지합니다.</p>
                     </div>
 
                     <div
-                        class="flex flex-col items-center text-center p-8 bg-dustypink-light/20 border border-dustypink/20">
+                        class="flex flex-col items-center text-center p-6 md:p-8 bg-dustypink-light/20 border border-dustypink/20">
                         <h4 class="text-xl font-display font-semibold text-charcoal/80 mb-4 italic">Cherry Scent</h4>
                         <p class="text-xs font-body text-charcoal/60 leading-relaxed">스윗한 체리향으로 설거지가 지루한<br />집안일에서 향기로운
                             힐링 시간으로 바뀝니다.</p>
@@ -350,7 +349,7 @@
         <!-- ============================================ -->
         <!-- HOW TO USE -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-pearl border-t border-charcoal/5">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-pearl border-t border-charcoal/5">
             <div class="max-w-2xl mx-auto">
                 <p class="text-[20px] tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">How to
                     use</p>
@@ -390,7 +389,7 @@
                         펌프는 잠금 상태로 개별 포장되어 있습니다. <br />하단의 흰색 부분을 잡고 상단 펌프를 시계 반대 방향으로 돌려 잠금을 해제 후 용기에 끼워 사용하세요.
                     </p>
                 </div>
-                <img src="../assets/laundry_detergent-pump.jpg" alt="주방세제 사용법" class="w-full mb-10" />
+                <img src="../assets/laundry_detergent-pump.jpg" alt="주방세제 사용법" class="w-full mt-12 mb-10" />
             </div>
         </section>
 
@@ -398,7 +397,7 @@
         <!-- ============================================ -->
         <!-- FAQ SECTION -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-warmgray">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-warmgray">
             <div class="max-w-2xl mx-auto">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">FAQ</p>
                 <h2 class="text-3xl font-display text-center mb-12">자주 묻는 질문</h2>
@@ -454,13 +453,13 @@
         <!-- ============================================ -->
         <!-- DISCLOSURE / 필수 표기사항 -->
         <!-- ============================================ -->
-        <section class="py-16 px-8 border-t border-charcoal/5 bg-pearl">
+        <section class="py-12 md:py-16 px-6 md:px-8 border-t border-charcoal/5 bg-pearl">
             <div class="max-w-3xl mx-auto">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">Disclosure</p>
-                <h2 class="text-3xl font-display text-center mb-12">위생용품관리법에 의한 품질 표시</h2>
+                <h2 class="text-xl md:text-3xl font-display text-center mb-12">위생용품관리법에 의한 품질 표시</h2>
 
                 <!-- 기본 정보 -->
-                <div class="grid grid-cols-2 gap-10 mb-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 mb-10">
                     <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
                         <tbody>
                             <tr class="border-b border-charcoal/5">

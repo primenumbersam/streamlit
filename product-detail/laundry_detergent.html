@@ -144,7 +144,7 @@
         <!-- ============================================ -->
         <!-- HERO SECTION -->
         <!-- ============================================ -->
-        <section class="relative overflow-hidden bg-pearl" style="min-height: 720px;">
+        <section class="relative overflow-hidden bg-pearl min-h-[600px] md:min-h-[720px]">
             <!-- ▼ EDIT: Hero Background Image Slot. 
            assets 폴더의 이미지를 배경 레이어로 사용할 때 이 부분의 주석을 해제하고 경로를 위치에 맞게 수정하세요.
            (예: style="background-image: url('../assets/HOW_TO_USE_BG.jpg');")  -->
@@ -157,13 +157,12 @@
             <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/80"></div>
 
             <!-- Hero content -->
-            <div class="relative z-10 flex flex-col items-center justify-center text-center px-8"
-                style="min-height: 720px;">
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20 md:px-8 md:min-h-[720px]">
                 <p class="text-xs tracking-[0.5em] uppercase text-charcoal/40 mb-3 font-body">Baby & Sensitive</p>
                 <p class="text-[10px] tracking-[0.5em] uppercase text-charcoal/30 mb-8 font-body">LAROE Laundry
                     Detergent</p>
 
-                <h1 class="text-4xl font-display font-light leading-tight mb-8 tracking-tight">
+                <h1 class="text-3xl md:text-4xl font-display font-light leading-tight mb-8 tracking-tight">
                     섬유 깊숙이 깨끗하게<br />섬유 보호를 동시에
                 </h1>
                 <p class="text-sm font-body text-charcoal/60 max-w-lg mx-auto leading-relaxed mb-4">
@@ -174,7 +173,7 @@
 
                 <!-- Promotion badge -->
                 <div
-                    class="inline-flex items-center gap-3 border border-charcoal/10 px-6 py-3 bg-white/70 backdrop-blur-sm mb-4">
+                    class="inline-flex flex-col md:flex-row items-center gap-2 md:gap-3 border border-charcoal/10 px-6 py-4 md:py-3 bg-white/70 backdrop-blur-sm mb-4">
                     <span
                         class="text-xs font-body tracking-wider text-charcoal/80 font-semibold text-lightblue-dark">PROMOTION</span>
                     <span class="w-px h-4 bg-charcoal/15"></span>
@@ -194,10 +193,10 @@
         <!-- ============================================ -->
         <!-- PROBLEM SECTION -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-pearl">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-pearl">
             <div class="max-w-2xl mx-auto text-center">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-8 font-body">The Question</p>
-                <h2 class="text-3xl font-display font-normal leading-snug mb-16 italic text-charcoal/90">
+                <h2 class="text-2xl md:text-3xl font-display font-normal leading-snug mb-12 md:mb-16 italic text-charcoal/90">
                     분명 세탁했는데... <br />왜 기분 좋은 향기가 나지 않을까요?
                 </h2>
 
@@ -222,7 +221,7 @@
                 </div>
 
                 <div class="p-8 bg-lightblue-light/30 border border-lightblue/20">
-                    <p class="text-[14px] font-display font-medium text-charcoal/80 leading-loose italic">
+                    <p class="text-[13px] md:text-[14px] font-display font-medium text-charcoal/80 leading-loose italic">
                         "중성세제만으로는 부족했던 섬유 속 유분 오염과 찌든 때를 제거하며<br />블랑향이 깊고 부드럽게 스며들어 온종일 지속됩니다."
                     </p>
                 </div>
@@ -232,7 +231,7 @@
         <!-- ============================================ -->
         <!-- RECOMMENDED FOR SECTION -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 border-t border-charcoal/5">
+        <section class="py-16 md:py-24 px-6 md:px-8 border-t border-charcoal/5">
             <div class="max-w-3xl mx-auto">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">Recommended
                     For</p>
@@ -283,12 +282,12 @@
         <!-- ============================================ -->
         <!-- FEATURE 01: ENZYMES -->
         <!-- ============================================ -->
-        <section class="py-28 px-8 bg-pearl border-t border-charcoal/5">
+        <section class="py-16 md:py-28 px-6 md:px-8 bg-pearl border-t border-charcoal/5">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-20">
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 01 — 7 Complex
                         Enzymes</p>
-                    <h2 class="text-4xl font-display font-normal leading-snug mb-4">
+                    <h2 class="text-3xl md:text-4xl font-display font-normal leading-snug mb-4">
                         얼룩은 하나가 아닙니다.<br />그래서 효소도 하나로는 부족합니다.
                     </h2>
                     <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
@@ -334,7 +333,7 @@
                 </div>
             </div>
 
-            <div class="mt-20 max-w-xs mx-auto">
+            <div class="mt-16 md:mt-20 max-w-xs mx-auto">
                 <img src="../assets/laundry_detergent-effect.jpg" alt="세탁세제 세척 효과"
                     class="w-full h-auto rounded-2xl shadow-xl shadow-charcoal/5 border border-charcoal/5 opacity-80" />
             </div>
@@ -346,12 +345,12 @@
         <!-- ============================================ -->
         <!-- FEATURE 02: pH LEVEL (약알칼리) -->
         <!-- ============================================ -->
-        <section class="py-28 px-8">
+        <section class="py-16 md:py-28 px-6 md:px-8">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-16">
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 02 — ph Balance
                     </p>
-                    <h2 class="text-2xl font-display font-normal leading-snug mb-4">
+                    <h2 class="text-xl md:text-2xl font-display font-normal leading-snug mb-4">
                         최적 세정력을 위한 pH 8~10 약알칼리 포뮬라
                     </h2>
                     <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
@@ -419,14 +418,14 @@
         <!-- ============================================ -->
         <!-- FEATURE 03: FRAGRANCE & CARE INGREDIENTS -->
         <!-- ============================================ -->
-        <section class="py-28 px-8 bg-warmgray border-t border-charcoal/5">
-            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section class="py-16 md:py-28 px-6 md:px-8 bg-warmgray border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <!-- Text & Care -->
                 <div>
                     <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 03 — Fragrance &
                         Care</p>
-                    <h2 class="text-4xl font-display font-normal leading-snug mb-6">
-                        섬유 속 오염과 생활취는 비우고, 그 자리에 <br />포근한 잔향을
+                    <h2 class="text-3xl md:text-4xl font-display font-normal leading-snug mb-6">
+                        섬유 속 오염과 생활취는 비우고, 그 자리에 <br class="hidden md:block" />포근한 잔향을
                     </h2>
                     <p class="text-sm font-body text-charcoal/60 leading-relaxed mb-10">
                         향으로 덮지 말고, 식물성 블렌딩으로 근본적인 냄새 원인을 해결하세요.
@@ -474,7 +473,7 @@
       
                 <!-- Fragrance Pyramid -->
                 <div
-                    class="relative w-full aspect-[2/1] bg-pearl flex flex-col items-center justify-center p-8 border border-charcoal/5">
+                    class="relative w-full aspect-square md:aspect-video lg:aspect-[2/1] bg-pearl flex flex-col items-center justify-center p-8 border border-charcoal/5">
                     <!-- ▼ EDIT: Fragrance Mood Image Slot. 
                          배경 이미지를 넣으려면 아래 img-placeholder div 내부의 svg/span을 지우고 <img> 태그를 넣으세요.
                          (예: <img src="../assets/fragrance_bg.jpg" class="w-full h-full object-cover" />) -->
@@ -518,7 +517,7 @@
         <!-- ============================================ -->
         <!-- HOW TO USE -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-pearl border-t border-charcoal/5">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-pearl border-t border-charcoal/5">
             <div class="max-w-2xl mx-auto">
                 <p class="text-[20px] tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">How to
                     use</p>
@@ -574,7 +573,7 @@
                         세탁 시 펌프를 끝까지 누르면 액체가 많이 나와 옷에 튈 수 있으니, 빨래 양에 맞게 눌러서 사용해 주세요.
                     </p>
                 </div>
-                <div class="mt-24 -mx-8 lg:mx-0">
+                <div class="mt-16 md:mt-24 -mx-6 md:-mx-8 lg:mx-0">
                     <img src="../assets/laundry_detergent-pump.jpg" alt="세탁세제 + 섬유유연제 세트" class="w-full h-auto" />
                 </div>
             </div>
@@ -584,7 +583,7 @@
         <!-- ============================================ -->
         <!-- FAQ SECTION -->
         <!-- ============================================ -->
-        <section class="py-24 px-8 bg-pearl border-t border-charcoal/10">
+        <section class="py-16 md:py-24 px-6 md:px-8 bg-pearl border-t border-charcoal/10">
             <div class="max-w-2xl mx-auto">
                 <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">FAQ</p>
                 <h2 class="text-3xl font-display text-center mb-12">자주 묻는 질문</h2>
