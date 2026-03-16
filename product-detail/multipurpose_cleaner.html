@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAROE | 다목적 욕실 클리너 거품형 그린로즈향</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1A1A',
+                        pearl: '#FDFCF9',
+                        dustypink: { light: '#F5E6E8', DEFAULT: '#D6A8AE', dark: '#B57D84' },
+                        sand: '#C2B280',
+                        warmgray: '#F5F4F0',
+                        sage: { light: '#E8EFE9', DEFAULT: '#9CB4A1', dark: '#6A836F' }
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+                        body: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+        }
+
+        /* === Placeholder === */
+        .img-placeholder {
+            background: linear-gradient(135deg, #E8EFE9 0%, #E8E7E3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            color: #6A836F;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-family: 'Noto Sans KR', sans-serif;
+            border: 1px dashed #9CB4A1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(156, 180, 161, 0.05) 20px,
+                    rgba(156, 180, 161, 0.05) 21px);
+        }
+
+        .img-placeholder svg {
+            width: 28px;
+            height: 28px;
+            opacity: 0.5;
+        }
+
+        /* === Abstract Bubble SVG Animation === */
+        @keyframes float1 {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.05);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(0.95);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .bubble-1 {
+            animation: float1 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .bubble-2 {
+            animation: float2 11s ease-in-out infinite reverse;
+            transform-origin: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-charcoal">
+
+    <div class="mx-auto" style="max-width: 1000px;">
+
+        <!-- ============================================ -->
+        <!-- HERO SECTION -->
+        <!-- ============================================ -->
+        <section class="relative overflow-hidden bg-pearl" style="min-height: 720px;">
+            <!-- ▼ EDIT: Hero Background Image Slot. 
+           assets 폴더의 이미지를 배경 레이어로 사용할 때 이 부분의 주석을 해제하고 경로를 위치에 맞게 수정하세요.
+           (예: style="background-image: url('../assets/HOW_TO_USE_BG.jpg');")  -->
+            <!-- <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center mix-blend-multiply" style="background-image: url('../assets/HOW_TO_USE_BG.jpg');"></div> -->
+
+            <!-- Hero background: decorative SVGs for Multipurpose Cleaner (Sage Green Theme) -->
+            <div class="absolute inset-0 z-0 opacity-100 bg-contain bg-center bg-no-repeat mix-blend-multiply"
+                style="background-image: url('../assets/multipurpose_cleaner-hero-1.jpg');"></div>
+
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/80"></div>
+
+            <!-- Hero content -->
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-8"
+                style="min-height: 720px;">
+                <p class="text-[11px] tracking-[0.5em] uppercase text-charcoal/50 mb-8 font-body">LAROE Multipurpose
+                    Cleaner</p>
+                <h1 class="text-2xl lg:text-3xl font-display font-light leading-loose mb-8 tracking-tight text-white">
+                    다목적 세정액
+                </h1>
+                <p class="text-sm font-body text-charcoal/60 max-w-lg mx-auto leading-relaxed mb-6 italic">
+                    라로에 욕실 클리너는 이렇게 다릅니다
+                </p>
+                <p class="text-sm font-body text-charcoal/60 max-w-lg mx-auto leading-relaxed mb-12 text-white italic">
+                    환기가 어려운 욕실에서도 부담 없이 사용할 수 있는 제품<br />
+                    데일리 욕실 관리에 적합한 클리너
+                </p>
+
+
+
+                <!-- Fragrance badge -->
+                <div
+                    class="mt-4 px-6 py-2 bg-warmgray text-charcoal/60 rounded-full text-sm font-body tracking-widest uppercase">
+                    Fresh Green Rose Scent
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- PROBLEM SECTION -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 bg-pearl">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-8 font-body">The Question</p>
+                <h2 class="text-3xl font-display font-normal leading-snug mb-16 italic text-charcoal/90">
+                    매일 사용하는 욕실 클리너인 만큼,<br />사용 환경과 사용성을 우선으로 생각했습니다.
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-4 block font-body">01</span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed font-medium">락스 특유의 강한 냄새 없이 <br />
+                            향이 좋은 욕실 클리너</p>
+                    </div>
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-4 block font-body">02</span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed font-medium">미스트 타입이 아닌, <br />거품형
+                            욕실 클리너
+                        </p>
+                    </div>
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-4 block font-body">03</span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed font-medium">분사 후 물로 헹궈주기만 하면 되는
+                            <br /> 간편한 사용
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-sage-light/30 border border-sage/20">
+                    <p class="text-[14px] font-body text-charcoal/70 leading-loose">
+                        <strong class="font-semibold text-charcoal">원하지 않는 곳까지 퍼지지 않아 오염 부위에 집중 세정이
+                            가능합니다.</strong><br />
+                        (미스트 타입 사용 시 원하지 않는 곳까지 분사되어 불편함을 느끼셨던 경우에 잘 맞습니다)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- RECOMMENDED FOR SECTION -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">Recommended
+                    For</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">욕실 전용 클리너를 찾고 있어요.</p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">청소 후 남는 독한 세제 냄새 대신 향긋함을 원해요.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">거품형 클리너를 선호해요.</p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">성분이 너무 강한 제품은 피하고 싶어요.</p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5 md:border-b-0">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">식물 유래 성분 제품으로 청소하고 싶어요. 
+                            <br/>코코-글루코사이드 15,000mg/kg (15,000 ppm) 함유로, 코코넛에서 추출한 식물성 계면활성제입니다.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5 md:border-b-0">
+                        <svg class="w-4 h-4 text-sage-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[14px] font-body text-charcoal/80 leading-relaxed">욕실 공간의 냄새와 물때를 함께 관리하고 싶은 분
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <img src="../assets/multipurpose_cleaner-1-1.jpg" alt="" class="w-full opacity-80">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FEATURE 01: INGREDIENTS -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8 bg-pearl border-t border-charcoal/5">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="text-sm tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 01 — Ingredients
+                    </p>
+                    <h2 class="text-3xl font-display font-normal leading-snug mb-4">
+                        투명한 세정 성분
+                    </h2>
+                    <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
+                        욕실 오염에 맞춘 다중 세정 설계
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-8 bg-white border border-charcoal/5 shadow-sm">
+                        <h4 class="text-lg font-display font-semibold text-charcoal mb-4 italic text-sage-dark">식물 유래
+                            코코글루코사이드</h4>
+                        <p class="text-sm font-body text-charcoal/60 leading-relaxed">코코-글루코사이드 15,000mg/kg (15,000 ppm), 코코넛에서 추출한 식물성 계면활성제로 <br/> 자극은 낮추고 세정력은 강화</p>
+                    </div>
+                    <div class="p-8 bg-white border border-charcoal/5 shadow-sm">
+                        <h4 class="text-lg font-display font-semibold text-charcoal mb-4 italic text-sage-dark">탄산나트륨 함유
+                        </h4>
+                        <p class="text-sm font-body text-charcoal/60 leading-relaxed">베이킹소다보다 강력한 세정력의 탄산나트륨 배합. 욕실 오염을
+                            효과적으로 분해하는 <br/>알칼리성 세정 성분</p>
+                    </div>
+                </div>
+
+                <!-- All ingredients chip -->
+                <div class="text-center p-6 bg-warmgray/50 rounded-sm">
+                    <span
+                        class="block text-[10px] tracking-widest text-charcoal/40 uppercase mb-3 font-semibold">전성분</span>
+                    <p class="text-xs font-body text-charcoal/50 leading-relaxed">정제수, 코코-글루코사이드, N,N-다이메틸도데실아민 N-옥사이드, 소듐라우레스설페이트, <br/>탄산 나트륨, 다이프로필렌글라이콜, 벤조산 나트륨, 청색1호, 황색4호, 향료</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FEATURE 02: FRAGRANCE -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8 border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual -->
+                <div class="w-full aspect-square relative opacity-70">
+                    <img src="../assets/multipurpose_cleaner-2.jpg" alt="green-rose-cleaner">
+                </div>
+
+                <!-- Text -->
+                <div>
+                    <p class="text-sm tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 02 — Fragrance
+                    </p>
+                    <h2 class="text-3xl font-display font-normal leading-snug mb-4">
+                        향에 대해
+                    </h2>
+                    <p class="text-sm font-body text-charcoal/50 leading-relaxed mb-10">
+                        시그니처 향 - Green Rose Blossom
+                    </p>
+
+                    <div class="space-y-6">
+                        <p class="text-sm font-body text-charcoal/70 leading-loose">
+                            그린 로즈 블라썸 향은 강하지 않게, 욕실 공간에 은은하게 퍼집니다.<br />
+                            청소 후에도 부담 없이 사용할 수 있도록 설계했습니다.<br />
+                            <strong class="font-medium text-charcoal mt-4 block">욕실의 악취를 잡고 싱그러운 그린 로즈 향만 가득히
+                                남깁니다.</strong>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FEATURE 03: FOAMING -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8 bg-warmgray border-t border-charcoal/5">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 03 — Foaming</p>
+                <h2 class="text-3xl font-display font-normal leading-snug mb-4">
+                    오염에 착- 붙는 <br />고밀도 거품
+                </h2>
+                <p class="text-[15px] font-display text-charcoal/60 leading-relaxed mb-12 italic">
+                    환기가 어려운 욕실 환경을 고려하여 개발
+                </p>
+
+                <div class="bg-white p-12 shadow-sm border border-charcoal/5">
+                    <p class="text-sm font-body text-charcoal/80 leading-relaxed">
+                        코코넛 유래 계면활성제(코코글루코사이드)를 사용한
+                        부드러운 세정력
+                        <br />
+                        고밀도 흡착형 거품이 오염 부위에 오래 머물러
+                        물때와 얼룩을 효과적으로 세정
+                        <br />
+                        액체나 미스트처럼 흐르거나 흩날리지 않아
+                        원하는 부위만 집중적으로 청소 가능
+                    </p>
+                </div>
+                <div class="mt-16">
+                    <img src="../assets/multipurpose_cleaner-3.jpg" alt="green-rose-cleaner"
+                        class="w-[70%] mx-auto opacity-70">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- HOW TO USE & PLACES -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 bg-pearl border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- How to Use -->
+                <div>
+
+                    <p
+                        class="text-[16px] tracking-[0.4em] uppercase text-charcoal/40 mb-10 font-body text-center md:text-left">
+                        How to use</p>
+                    <h3 class="text-2xl font-display font-medium text-charcoal mb-4">분사 후 헹굼만으로 간편한 마무리</h3>
+                    <p class="text-sm font-body text-charcoal/50 mb-10">사각지대까지 꼼꼼한 세정</p>
+
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white border border-charcoal/5">
+                            <span class="text-xs font-bold text-sage-dark mb-2 block tracking-widest">STEP 01</span>
+                            <p class="text-sm font-body text-charcoal/70 leading-relaxed">세정이 필요한 욕실 표면에 적당량을 분사해 주세요.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-white border border-charcoal/5">
+                            <span class="text-xs font-bold text-sage-dark mb-2 block tracking-widest">STEP 02</span>
+                            <p class="text-sm font-body text-charcoal/70 leading-relaxed">잠시 후 물로 충분히 헹궈 마무리해 주세요.</p>
+                        </div>
+                    </div>
+
+                    <p class="mt-8 text-xs font-body text-dustypink-dark font-medium italic">※ 피부에 직접 사용하는 제품이 아니며, 사용
+                        후에는 물로 충분히 헹궈주세요.</p>
+                </div>
+
+                <!-- Where to Use -->
+                <div>
+                    <p
+                        class="text-[16px] tracking-[0.4em] uppercase text-charcoal/40 mb-10 font-body text-center md:text-left">
+                        Where to use</p>
+                    <h3 class="text-2xl font-display font-medium text-charcoal mb-4">집 안 곳곳 다양한 공간에</h3>
+                    <p class="text-sm font-body text-charcoal/50 mb-10">묵은 때와 얼룩을 간편하게 관리하세요</p>
+
+                    <ul class="grid grid-cols-2 gap-y-4 gap-x-2">
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">욕실 물때</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">타일</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">세면대</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">욕조</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">변기</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">베란다 창문</span></li>
+                        <li class="flex items-center gap-3 border-b border-charcoal/5 pb-2 col-span-2"><span
+                                class="w-1 h-1 bg-sage-dark rounded-full"></span><span
+                                class="text-sm font-body text-charcoal/70">다용도실 바닥 등</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Pump Instructions Notice Option -->
+            <div class="mt-24 w-full">
+                <div
+                    class="bg-white p-8 border border-charcoal/5 shadow-sm text-center md:text-left flex flex-col md:flex-row items-center gap-10">
+                    <div class="shrink-0 w-full md:w-2/5">
+                        <img src="../assets/multipurpose_cleaner-pump-1.jpg" alt="Multipurpose Cleaner Pump Instruction"
+                            class="w-full h-auto mix-blend-multiply opacity-90 mx-auto max-w-[280px]">
+                        <p class="text-[10px] font-body text-charcoal/40 text-center tracking-wider mt-4">노즐을 화살표 방향으로
+                            돌려 ON 상태로 맞춘 후 사용하세요.</p>
+                    </div>
+
+                    <div class="w-full md:w-3/5 text-left">
+                        <span
+                            class="block text-[10px] tracking-widest uppercase font-semibold text-charcoal/40 mb-3">Notice</span>
+                        <h3
+                            class="text-lg font-display font-medium text-charcoal/90 mb-4 border-b border-charcoal/5 pb-4">
+                            사용 전 노즐 확인</h3>
+
+                        <p class="text-[13px] font-body text-charcoal/60 leading-relaxed mb-6">
+                            본 제품의 분사 트리거 앞쪽에는 회전 가능한 노즐이 장착되어 있습니다. 사용 전 방향을 꼭 확인해 주세요.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                                <span class="text-xs font-semibold text-charcoal/80 shrink-0 w-10 pt-0.5">'OFF'</span>
+                                <p class="text-[12px] font-body text-charcoal/60 leading-relaxed">노즐 상단에 'OFF' 표시가 보일 때는
+                                    분사가 되지 않도록 잠겨 있습니다. 반드시 사용 전 노즐을 회전시켜 주세요.</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="text-xs font-semibold text-sage-dark shrink-0 w-10 pt-0.5">'ON'</span>
+                                <p class="text-[12px] font-body text-charcoal/60 leading-relaxed">노즐을 돌려 'ON' 표시가 상단에
+                                    위치하게 하면, 분사되는 모드로 전환됩니다. 이 상태에서 트리거를 당겨 사용하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </section>
+
+    <!-- ============================================ -->
+    <!-- DISCLOSURE / 필수 표기사항 -->
+    <!-- ============================================ -->
+    <section class="py-16 px-8 border-t border-charcoal/5 bg-warmgray">
+        <div class="max-w-3xl mx-auto">
+            <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">Disclosure</p>
+            <h2 class="text-xl font-display text-center mb-12">안전확인대상생활화학제품 표시사항</h2>
+
+            <!-- 기본 정보 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 mb-10">
+                <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                    <tbody>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 w-1/3"><span class="underline font-semibold text-charcoal">품목</span>
+</td>
+                            <td class="py-2"><span class="underline font-semibold text-charcoal">세정제</span></td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">제품명</td>
+                            <td class="py-2">라로에 다목적 욕실 클리너 거품형 그린로즈향</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">용도</td>
+                            <td class="py-2">일반용(오븐용, 렌지후드용, 욕실용, 변기용, 카페트용, 세탁조용, 배수관용, 건물 바닥용, 기타표면세정용(거울용, 싱크대용, 가스레인지용, 타일용, 인덕션용, 전자레인지용))</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">제형</td>
+                            <td class="py-2">분무기형</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">액성</td>
+                            <td class="py-2">원액(약알칼리성)</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">용량</td>
+                            <td class="py-2">500mL</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">제조연월</td>
+                            <td class="py-2">별도표기</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">유통기한</td>
+                            <td class="py-2">제조일로부터 24개월</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                    <tbody>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 w-1/3">신고번호</td>
+                            <td class="py-2 tracking-widest text-charcoal/80 font-medium"><span class="underline font-semibold text-charcoal">CB24-01-0034</span></td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">제조국</td>
+                            <td class="py-2">대한민국</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">제조자 주소 연락처</td>
+                            <td class="py-2">주식회사 제이엔케이코스 / 경상북도 칠곡군 약목면 복성20길 72-8, 에이동 / 070-4757-8399</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">판매자 주소 연락처</td>
+                            <td class="py-2">라로에 laroe / 경기도 의왕시 백운호수로5길 15, 1층상가 104호(학의동) / 070-8287-2006</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60">표준사용량</td>
+                            <td class="py-2">해당없음</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mb-10 text-[11px] font-body text-charcoal/50">
+                <span class="font-semibold text-charcoal/60 inline-block mr-2">고객상담실:</span> 070-8287-2006<br />
+                <span class="font-semibold text-charcoal/60 inline-block mr-2 mt-1">품질보증기준:</span> 본 제품에 이상이 있을 경우
+                공정거래위원회 고시 소비자 분쟁 해결 기준에 의거하여 교환 또는 보상을 받을 수 있습니다.
+            </div>
+
+            <!-- ▼ EDIT: Disclosure — 사용 물질 및 성분명 -->
+            <div class="mb-10">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용 물질 및 성분명</p>
+                <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                    <tbody>
+                        <tr class="border-t border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 align-top w-1/5 whitespace-nowrap pr-4">
+                                주요물질</td>
+                            <td class="py-2">N,N-다이메틸도데실아민 N-옥사이드, 정제수, 코코-글루코사이드</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">보존제</td>
+                            <td class="py-2">벤조산 나트륨</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">알레르기물질</td>
+                            <td class="py-2">리날로올, 리모넨, 헥실신남알</td>
+                        </tr>
+                        <tr class="border-b border-charcoal/5">
+                            <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">계면활성제</td>
+                            <td class="py-2">N,N-다이메틸도데실아민 N-옥사이드(양쪽성 이온계), 소듐라우레스설페이트(음이온계), 코코-글루코사이드(비이온계)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ▼ EDIT: Disclosure — 사용방법 -->
+            <div class="mb-10">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용방법</p>
+                <ol class="text-[11px] font-body text-charcoal/50 leading-loose list-decimal list-inside space-y-1">
+                    <li>사용 전 제품을 흔들어 사용해 주십시오.</li>
+                    <li>사용하고자 하는 곳에 약 15cm 이상의 충분한 거리를 두고 분사해 주십시오.</li>
+                    <li>분사 5분 정도 경과 후 세척해 주십시오.</li>
+                </ol>
+            </div>
+
+            <!-- ▼ EDIT: Disclosure — 사용상 주의사항 -->
+            <div class="mb-10">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용상 주의사항</p>
+                <ol class="text-[11px] font-body text-charcoal/50 leading-loose list-decimal list-inside space-y-1">
+                    <li><span class="underline font-semibold text-charcoal">표시사항에 기재된 제품의 용도 외에는 사용하지 마시오.</span></li>
+                    <li>어린이 손에 닿지 않는 곳에 보관하시오.</li>
+                    <li>직사광선을 피하고 항상 뚜껑을 닫아 보관하여 주시오.</li>
+                    <li>장갑, 마스크 등 적절한 보호구를 착용하시오.</li>
+                    <li>눈보다 높은 곳에서 사용하면 분사액이 눈에 들어갈 수 있으므로 주의하시오.</li>
+                    <li><span class="underline font-semibold text-charcoal">다른 제품과 섞어 사용할 경우 인체에 치명적인 손상을 입힐 수 있으니 섞어 사용하지 마시오.</span></li>
+                    <li><span class="underline font-semibold text-charcoal">피부가 민감하거나 손상된 사람은 제품을 장기간 접촉하지 않도록 주의하시오.</span></li>
+                </ol>
+            </div>
+
+            <!-- ▼ EDIT: Disclosure — 응급처치 -->
+            <div class="mb-10">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">응급처치</p>
+                <ol class="text-[11px] font-body text-charcoal/50 leading-loose list-decimal list-inside space-y-1">
+                    <li>제품이 눈에 들어가거나 마신 경우 흐르는 물에 세척하거나 토한 후 의사의 상담을 받으시오.</li>
+                    <li><span class="underline font-semibold text-charcoal">피부자극 반응 또는 붉은 반점이 나타나면 의학적 조치를 받으시오.</span></li>
+                </ol>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="py-8 px-8 text-center border-t border-charcoal/5">
+        <div class="flex items-center justify-center gap-6 mb-4">
+            <p class="text-lg font-display tracking-tight text-charcoal/55 italic">Candid. Minimal. Sustainable.</p>
+        </div>
+        <p class="text-[9px] text-charcoal/55 font-body tracking-[0.3em] uppercase">© 2026 LAROE All Rights
+            Reserved.</p>
+    </footer>
+
+    </div>
+</body>
+
+</html>

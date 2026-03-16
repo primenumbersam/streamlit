@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAROE | 프리미엄 블랑향 아기 세탁세제</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1A1A1A',
+                        pearl: '#FDFCF9',
+                        dustypink: { light: '#F5E6E8', DEFAULT: '#D6A8AE', dark: '#B57D84' },
+                        sand: '#C2B280',
+                        warmgray: '#F5F4F0',
+                        lightblue: { light: '#EEF2F6', DEFAULT: '#9EADC8', dark: '#6A7E9C' }
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+                        body: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+        }
+
+        /* === Placeholder === */
+        .img-placeholder {
+            background: linear-gradient(135deg, #EEF2F6 0%, #E8E7E3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            color: #6A7E9C;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-family: 'Noto Sans KR', sans-serif;
+            border: 1px dashed #9EADC8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent 20px,
+                    rgba(158, 173, 200, 0.05) 20px,
+                    rgba(158, 173, 200, 0.05) 21px);
+        }
+
+        .img-placeholder svg {
+            width: 28px;
+            height: 28px;
+            opacity: 0.5;
+        }
+
+        /* === Abstract Bubble SVG Animation === */
+        @keyframes float1 {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.05);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes float2 {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(0.95);
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .bubble-1 {
+            animation: float1 8s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .bubble-2 {
+            animation: float2 11s ease-in-out infinite reverse;
+            transform-origin: center;
+        }
+
+        /* === pH Scale Gradient === */
+        .ph-gradient {
+            background: linear-gradient(to right,
+                    #F18B80 0%,
+                    /* 산성 - 붉은색 계열 */
+                    #F9C86F 35%,
+                    /* 약산성 - 노란색 계열 */
+                    #8ED3A4 50%,
+                    /* 중성 - 초록색 계열 */
+                    #6EABD8 65%,
+                    /* 약알칼리성 - 푸른색 계열 (Our Target pH 8~10) */
+                    #5C6EB8 100%
+                    /* 알칼리성 - 짙은 푸른색 계열 */
+                );
+        }
+    </style>
+</head>
+
+<body class="bg-white text-charcoal">
+
+    <div class="mx-auto" style="max-width: 1000px;">
+
+        <!-- ============================================ -->
+        <!-- HERO SECTION -->
+        <!-- ============================================ -->
+        <section class="relative overflow-hidden bg-pearl" style="min-height: 720px;">
+            <!-- ▼ EDIT: Hero Background Image Slot. 
+           assets 폴더의 이미지를 배경 레이어로 사용할 때 이 부분의 주석을 해제하고 경로를 위치에 맞게 수정하세요.
+           (예: style="background-image: url('../assets/HOW_TO_USE_BG.jpg');")  -->
+            <!-- <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center mix-blend-multiply" style="background-image: url('../assets/HOW_TO_USE_BG.jpg');"></div> -->
+
+            <!-- Hero background: decorative SVGs for Laundry Detergent (Light Blue Theme) -->
+            <div class="absolute inset-0 z-0 opacity-100 bg-cover bg-center mix-blend-multiply"
+                style="background-image: url('../assets/laundry_detergent-hero-2.jpg');"></div>
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/80"></div>
+
+            <!-- Hero content -->
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-8"
+                style="min-height: 720px;">
+                <p class="text-xs tracking-[0.5em] uppercase text-charcoal/40 mb-3 font-body">Baby & Sensitive</p>
+                <p class="text-[10px] tracking-[0.5em] uppercase text-charcoal/30 mb-8 font-body">LAROE Laundry
+                    Detergent</p>
+
+                <h1 class="text-4xl font-display font-light leading-tight mb-8 tracking-tight">
+                    섬유 깊숙이 깨끗하게<br />섬유 보호를 동시에
+                </h1>
+                <p class="text-sm font-body text-charcoal/60 max-w-lg mx-auto leading-relaxed mb-4">
+                    업그레이드된 세척력과 섬유 컨디션까지 고려한 설계<br />
+                    7중 효소 × 식물 유래 블렌딩 + 베이킹소다 함유
+                </p>
+<p class="text-[10px] font-body text-charcoal/40 max-w-lg mx-auto leading-relaxed mb-12">레몬그라스추출물 10mg/kg (10ppm), 황금추출물 10mg/kg (10ppm), 녹차추출물 10mg/kg (10ppm)</p>
+
+                <!-- Promotion badge -->
+                <div
+                    class="inline-flex items-center gap-3 border border-charcoal/10 px-6 py-3 bg-white/70 backdrop-blur-sm mb-4">
+                    <span
+                        class="text-xs font-body tracking-wider text-charcoal/80 font-semibold text-lightblue-dark">PROMOTION</span>
+                    <span class="w-px h-4 bg-charcoal/15"></span>
+                    <span class="text-xs font-body tracking-wider text-charcoal/50">세탁세제 전용 펌프 1개 무료 증정 (별도 포장)</span>
+                </div>
+
+                <!-- Fragrance badge -->
+                <div
+                    class="mt-4 px-6 py-2 bg-charcoal text-white rounded-full text-xs font-body tracking-widest uppercase">
+                    White Floral Bouquet · Green Floral · Woody Musk
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- PROBLEM SECTION -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 bg-pearl">
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-8 font-body">The Question</p>
+                <h2 class="text-3xl font-display font-normal leading-snug mb-16 italic text-charcoal/90">
+                    분명 세탁했는데... <br />왜 기분 좋은 향기가 나지 않을까요?
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-2 block font-body">01</span>
+                        <h4 class="text-sm font-semibold text-charcoal mb-2 font-body">실내 건조의 한계</h4>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">햇살 없는 건조 과정에서 발생하는 <br /> 눅눅한 냄새
+                        </p>
+                    </div>
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-2 block font-body">02</span>
+                        <h4 class="text-sm font-semibold text-charcoal mb-2 font-body">날씨의 영향</h4>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">높은 습도와 장마철 공기로 인한 꿉꿉함</p>
+                    </div>
+                    <div class="text-left border-t border-charcoal/10 pt-6">
+                        <span class="text-xs tracking-widest text-charcoal/40 uppercase mb-2 block font-body">03</span>
+                        <h4 class="text-sm font-semibold text-charcoal mb-2 font-body">일상의 생활취</h4>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">요리나 생활 속에서 섬유에 배어드는 <br />각종 냄새
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-lightblue-light/30 border border-lightblue/20">
+                    <p class="text-[14px] font-display font-medium text-charcoal/80 leading-loose italic">
+                        "중성세제만으로는 부족했던 섬유 속 유분 오염과 찌든 때를 제거하며<br />블랑향이 깊고 부드럽게 스며들어 온종일 지속됩니다."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- RECOMMENDED FOR SECTION -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 border-t border-charcoal/5">
+            <div class="max-w-3xl mx-auto">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">Recommended
+                    For</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    <!-- Check list items -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-lightblue-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[13px] font-body text-charcoal/70 leading-relaxed">바쁜 아침, 일일이 향수를 뿌리지 않아도 옷깃에서
+                            번지는 <br />은은한 잔향을 원하시는 분</p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5">
+                        <svg class="w-4 h-4 text-lightblue-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[13px] font-body text-charcoal/70 leading-relaxed">아이와 반려견 때문에 강한 향수 사용은
+                            꺼려지지만,<br />
+                            꿉꿉한 냄새는 고급스럽게 지우고 싶은 분</p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5 md:border-b-0">
+                        <svg class="w-4 h-4 text-lightblue-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[13px] font-body text-charcoal/70 leading-relaxed">니치 향수에서 느껴지는 깊은 잔향처럼,
+                            <br />프리미엄 블랑의
+                            여운을 느끼고 싶은 분
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-4 pb-4 border-b border-charcoal/5 md:border-b-0">
+                        <svg class="w-4 h-4 text-lightblue-dark shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-[13px] font-body text-charcoal/70 leading-relaxed">소량·개별 빨래를 자주 하시는 분 <br />(한 번
+                            돌릴 때마다
+                            캡슐 세제가 늘 부담스러웠다면)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FEATURE 01: ENZYMES -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8 bg-pearl border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-20">
+                    <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 01 — 7 Complex
+                        Enzymes</p>
+                    <h2 class="text-4xl font-display font-normal leading-snug mb-4">
+                        얼룩은 하나가 아닙니다.<br />그래서 효소도 하나로는 부족합니다.
+                    </h2>
+                    <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
+                        7가지 복합 효소 시스템 × 식물 유래 블렌딩
+                    </p>
+                    <p class="text-[10px] font-body text-charcoal/40 max-w-lg mx-auto leading-relaxed mb-12">레몬그라스추출물 10mg/kg (10ppm), 황금추출물 10mg/kg (10ppm), 녹차추출물 10mg/kg (10ppm)</p>
+
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Enzyme Cards -->
+                    <div class="bg-white p-6 border border-charcoal/5 shadow-sm">
+                        <h4 class="text-sm font-semibold text-charcoal mb-3 font-body">프로테아제 & 리파아제</h4>
+                        <p
+                            class="text-xs font-body text-charcoal/60 leading-relaxed mb-2 pb-2 border-b border-charcoal/5">
+                            땀, 피지 등 단백질 분해</p>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">화장품, 기름 등 지방 분해</p>
+                    </div>
+
+                    <div class="bg-white p-6 border border-charcoal/5 shadow-sm">
+                        <h4 class="text-sm font-semibold text-charcoal mb-3 font-body">펙티나아제 & 아밀라아제</h4>
+                        <p
+                            class="text-xs font-body text-charcoal/60 leading-relaxed mb-2 pb-2 border-b border-charcoal/5">
+                            과일·채소 얼룩의 다당류 분해</p>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">녹말, 소스 등 다양한 얼룩 분해</p>
+                    </div>
+
+                    <div class="bg-white p-6 border border-charcoal/5 shadow-sm">
+                        <h4 class="text-sm font-semibold text-charcoal mb-3 font-body">만나아제</h4>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">주스, 초콜릿 등 당류 분해</p>
+                    </div>
+
+                    <div class="bg-white p-6 border border-charcoal/5 shadow-sm relative overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-lightblue-light/20 -z-10 group-hover:bg-lightblue-light/40 transition-colors">
+                        </div>
+                        <h4 class="text-sm font-semibold text-lightblue-dark mb-3 font-body">셀룰라아제 1·2제</h4>
+                        <p
+                            class="text-xs font-body text-charcoal/60 leading-relaxed mb-2 pb-2 border-b border-charcoal/5">
+                            컬러 컨디션, 브라이트닝 케어</p>
+                        <p class="text-xs font-body text-charcoal/60 leading-relaxed">찌든 오염 관리, 보풀 방지 케어</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 max-w-xs mx-auto">
+                <img src="../assets/laundry_detergent-effect.jpg" alt="세탁세제 세척 효과"
+                    class="w-full h-auto rounded-2xl shadow-xl shadow-charcoal/5 border border-charcoal/5 opacity-80" />
+            </div>
+
+
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FEATURE 02: pH LEVEL (약알칼리) -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body">Point 02 — ph Balance
+                    </p>
+                    <h2 class="text-2xl font-display font-normal leading-snug mb-4">
+                        최적 세정력을 위한 pH 8~10 약알칼리 포뮬라
+                    </h2>
+                    <p class="text-sm font-body text-charcoal/50 max-w-md mx-auto leading-relaxed">
+                        지방산과 단백질 성분 제거까지 필요한 일상 빨래에 최적화!
+                    </p>
+                </div>
+
+                <!-- Visual pH Scale -->
+                <div class="mb-16">
+                    <!-- pH Gradient Bar -->
+                    <div class="w-full h-4 rounded-full ph-gradient relative mb-8">
+                        <!-- Marker for Target pH -->
+                        <div class="absolute -top-3 -bottom-3 w-1.5 bg-white border border-charcoal shadow-sm z-10 rounded-sm"
+                            style="left: 65%;"></div>
+                        <!-- Tooltip for Marker -->
+                        <div class="absolute -top-12 -translate-x-1/2 flex flex-col items-center" style="left: 65%;">
+                            <div
+                                class="bg-charcoal text-white text-[10px] px-3 py-1 rounded-sm font-semibold whitespace-nowrap">
+                                LAROE (pH 8~10)
+                            </div>
+                            <div
+                                class="w-0 h-0 border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-charcoal">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Labels -->
+                    <div
+                        class="flex justify-between text-[11px] font-body text-charcoal/50 font-medium uppercase tracking-wider">
+                        <span>산성(Acidic)</span>
+                        <span>중성(Neutral)</span>
+                        <span>알칼리성(Alkaline)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6 max-w-xl mx-auto">
+                    <div class="flex items-start gap-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-lightblue-dark mt-2 shrink-0"></span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed"><strong
+                                class="font-semibold text-charcoal">땀과 피지 분해 탁월:</strong> 섬유 속 깊이 박힌 체취와 땀 성분을 효과적으로
+                            제거합니다.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-lightblue-dark mt-2 shrink-0"></span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed"><strong
+                                class="font-semibold text-charcoal">강력한 얼룩 제거:</strong> 중성세제로는 잘 지워지지 않는 찌든 때와 생활 얼룩을
+                            알칼리 환경에서 분해.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-lightblue-dark mt-2 shrink-0"></span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed"><strong
+                                class="font-semibold text-charcoal">황변 현상 방지:</strong> 옷이 누렇게 변하는 원인인 단백질 오염을 분해하여 옷의 본래
+                            색감 유지.</p>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-lightblue-dark mt-2 shrink-0"></span>
+                        <p class="text-sm font-body text-charcoal/80 leading-relaxed"><strong
+                                class="font-semibold text-charcoal">약알칼리 설계:</strong> 매일 사용하는 아기 의류 세탁에 적합할 수 있도록 과도하게
+                            높은 알칼리가 아닌 pH 8~10 범위로 균형있게 설계되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FEATURE 03: FRAGRANCE & CARE INGREDIENTS -->
+        <!-- ============================================ -->
+        <section class="py-28 px-8 bg-warmgray border-t border-charcoal/5">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Text & Care -->
+                <div>
+                    <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-6 font-body">Point 03 — Fragrance &
+                        Care</p>
+                    <h2 class="text-4xl font-display font-normal leading-snug mb-6">
+                        섬유 속 오염과 생활취는 비우고, 그 자리에 <br />포근한 잔향을
+                    </h2>
+                    <p class="text-sm font-body text-charcoal/60 leading-relaxed mb-10">
+                        향으로 덮지 말고, 식물성 블렌딩으로 근본적인 냄새 원인을 해결하세요.
+                    </p>
+
+                    <!-- Ingredient Chips -->
+                    <div class="grid grid-cols-1 gap-4 mb-10">
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="px-3 py-1 bg-white border border-charcoal/10 text-[11px] font-body text-charcoal/70 rounded-full">식물 추출물 블렌딩</span>
+                            <p class="text-[10px] font-body text-charcoal/40 leading-relaxed">
+                                레몬그라스추출물 10mg/kg (10ppm), 황금추출물 10mg/kg (10ppm), 녹차추출물 10mg/kg (10ppm)
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="px-3 py-1 bg-white border border-charcoal/10 text-[11px] font-body text-charcoal/70 rounded-full">코코넛 유래 계면활성제</span>
+                            <p class="text-[10px] font-body text-charcoal/40 leading-relaxed">
+                                코코-글루코사이드 100mg/kg (100ppm), 카프릴릴/카프릴글루코사이드 100mg/kg (100ppm),<br/>
+                                라우릴글루코사이드 ; C10-16-알킬글리코사이드 10,000mg/kg (10,000ppm)
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-start gap-2">
+                            <span class="px-3 py-1 bg-white border border-charcoal/10 text-[11px] font-body text-charcoal/70 rounded-full">베이킹 소다 함유</span>
+                            <p class="text-[10px] font-body text-charcoal/40 leading-relaxed">베이킹소다의 함유량 10mg/kg(10ppm)</p>
+                        </div>
+                    </div>
+
+                    <!-- Tech Details -->
+                    <div class="space-y-4">
+                        <div class="p-5 bg-white border-l-2 border-lightblue-dark shadow-sm">
+                            <h5 class="text-sm font-bold text-charcoal mb-2 font-display italic">탈취 제어 기술: 사이클로덱스트린</h5>
+                            <p class="text-xs font-body text-charcoal/60 leading-relaxed">세정 후 섬유에 남을 수 있는 냄새 분자를
+                                포집하여<br />
+                                산뜻한 세탁 마무리를 돕습니다.</p>
+                        </div>
+                        <div class="p-5 bg-white border-l-2 border-lightblue-dark shadow-sm">
+                            <h5 class="text-sm font-bold text-charcoal mb-2 font-display italic">재오염 방지 설계: PVP</h5>
+                            <p class="text-xs font-body text-charcoal/60 leading-relaxed">세탁 과정에서 떨어져 나온 오염이 <br />다시
+                                섬유에 부착되는
+                                것을 줄이도록 돕는 설계입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+      
+                <!-- Fragrance Pyramid -->
+                <div
+                    class="relative w-full aspect-[2/1] bg-pearl flex flex-col items-center justify-center p-8 border border-charcoal/5">
+                    <!-- ▼ EDIT: Fragrance Mood Image Slot. 
+                         배경 이미지를 넣으려면 아래 img-placeholder div 내부의 svg/span을 지우고 <img> 태그를 넣으세요.
+                         (예: <img src="../assets/fragrance_bg.jpg" class="w-full h-full object-cover" />) -->
+
+                    <div class="absolute inset-0 z-0">
+                        
+                        <div class="img-placeholder w-full h-full opacity-30" data-placeholder="fragrance-mood">
+                            <img src="../assets/evie-s-cmbbwn-2Ilw-unsplash.jpg" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 w-full max-w-xs space-y-6">
+                        <div class="text-center">
+                            <h4 class="text-xl font-display font-light text-charcoal italic mb-2">Top (Green Floral)</h4>
+                            <p class="text-xs font-body tracking-[0.2em] text-charcoal/60 uppercase">White Rose <span
+                                    class="mx-1">•</span> Pink Pepper</p>
+                        </div>
+                        <div class="w-full h-px bg-charcoal/10"></div>
+
+                        <div class="text-center">
+                            <h4 class="text-xl font-display font-light text-charcoal italic mb-2">Middle (White Floral Bouquet)</h4>
+                            <p class="text-xs font-body tracking-[0.2em] text-charcoal/60 uppercase">Violet <span
+                                    class="mx-1">•</span> Neroli <span class="mx-1">•</span> Peony</p>
+                        </div>
+                        <div class="w-full h-px bg-charcoal/10"></div>
+
+                        <div class="text-center">
+                            <h4 class="text-xl font-display font-light text-charcoal italic mb-2">Base (Woody Musk)</h4>
+                            <p class="text-xs font-body tracking-[0.2em] text-charcoal/60 uppercase">Sandalwood <span
+                                    class="mx-1">•</span> White Musk</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+                <!-- <div class="mt-24 -mx-8 lg:mx-0">
+                    <img src="../assets/laundry_detergent-hero-3.jpg" alt="세탁세제 + 섬유유연제 세트" class="w-full h-auto" />
+                </div> -->
+        </section>
+
+        <!-- ============================================ -->
+        <!-- HOW TO USE -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 bg-pearl border-t border-charcoal/5">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-[20px] tracking-[0.6em] uppercase text-charcoal/30 mb-12 font-body text-center">How to
+                    use</p>
+
+                <!-- ▼ EDIT: How to Use Image Slot.
+                   assets 폴더의 이미지를 넣을 때 아래 주석을 해제하고 경로를 수정하세요.
+                   (예: <img src="../assets/laundry_how_to_use.jpg" alt="세탁세제 사용법" class="w-full mb-10" />) -->
+
+                <div class="space-y-10">
+                    <!-- 사용방법 -->
+                    <div class="bg-white p-8 border border-charcoal/5 shadow-sm">
+                        <h3
+                            class="text-xl font-display font-semibold text-charcoal/80 mb-4 border-b border-charcoal/5 pb-4">
+                            01. 사용방법</h3>
+                        <p class="text-sm font-body text-charcoal/60 leading-relaxed">
+                            세탁세제를 해당 표준사용량에 맞춰 세탁기의 세제투입구에 투여하세요.
+                        </p>
+                    </div>
+
+                    <!-- 표준사용량 -->
+                    <div class="bg-white p-8 border border-charcoal/5 shadow-sm">
+                        <h3
+                            class="text-xl font-display font-semibold text-charcoal/80 mb-4 border-b border-charcoal/5 pb-4">
+                            02. 표준사용량</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p
+                                    class="text-xs font-body font-semibold text-charcoal/70 tracking-wider uppercase mb-2">
+                                    일반세탁기</p>
+                                <p class="text-sm font-body text-charcoal/60 leading-relaxed">
+                                    고 100L이상 70ml · 중 65~75L 50ml · 저 45~55L 30ml
+                                </p>
+                            </div>
+                            <div class="w-full h-px bg-charcoal/5"></div>
+                            <div>
+                                <p
+                                    class="text-xs font-body font-semibold text-charcoal/70 tracking-wider uppercase mb-2">
+                                    드럼세탁기</p>
+                                <p class="text-sm font-body text-charcoal/60 leading-relaxed">
+                                    대 드럼 2/3 7kg이상 40ml · 중 드럼 1/2~2/3이하 5~7kg이하 30ml · 소 드럼 1/3이하 5kg이하 25ml
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 펌프 안내창 -->
+                <div class="mt-12 p-6 bg-warmgray/70 text-center border border-charcoal/10 rounded-sm">
+                    <span
+                        class="block text-xs tracking-widest uppercase font-semibold text-charcoal/40 mb-3">Notice</span>
+                    <p class="text-xs font-body text-charcoal/60 leading-relaxed">
+                        펌프는 잠금 상태로 개별 포장되어 있습니다. <br />하단의 흰색 부분을 잡고 상단 펌프를 시계 반대 방향으로 돌려 잠금을 해제 후 용기에 끼워 사용하세요.<br />
+                        세탁 시 펌프를 끝까지 누르면 액체가 많이 나와 옷에 튈 수 있으니, 빨래 양에 맞게 눌러서 사용해 주세요.
+                    </p>
+                </div>
+                <div class="mt-24 -mx-8 lg:mx-0">
+                    <img src="../assets/laundry_detergent-pump.jpg" alt="세탁세제 + 섬유유연제 세트" class="w-full h-auto" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================ -->
+        <!-- FAQ SECTION -->
+        <!-- ============================================ -->
+        <section class="py-24 px-8 bg-pearl border-t border-charcoal/10">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">FAQ</p>
+                <h2 class="text-3xl font-display text-center mb-12">자주 묻는 질문</h2>
+
+                <div class="space-y-0 border-t border-charcoal/10">
+                    <details class="border-b border-charcoal/10 group" open>
+                        <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
+                            <span class="text-sm font-body font-medium text-charcoal pr-8">프리미엄 블랑향 아기 세탁세제는 드럼용/일반용이
+                                나누어져 있나요?</span>
+                            <span
+                                class="text-charcoal/30 text-lg font-light group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>
+                        </summary>
+                        <div class="pb-5 text-sm font-body text-charcoal/60 leading-relaxed">
+                            드럼용/일반용 겸용 제품입니다.
+                        </div>
+                    </details>
+
+                    <details class="border-b border-charcoal/10 group" open>
+                        <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
+                            <span class="text-sm font-body font-medium text-charcoal pr-8">중성세제와 약알칼리 세제는 뭐가
+                                다른가요?</span>
+                            <span
+                                class="text-charcoal/30 text-lg font-light group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>
+                        </summary>
+                        <div class="pb-5 text-sm font-body text-charcoal/60 leading-relaxed">
+                            중성세제는 섬유 자극이 적은 대신 세정력이 비교적 부드러운 편이에요. 라로에는 약알칼리 포뮬라로 일상 오염과 냄새 원인을 깨끗하게 세정하면서도, 아기 옷에 부담을 줄이도록 균형을 맞췄어요.
+                        </div>
+                    </details>
+
+                    <details class="border-b border-charcoal/10 group" open>
+                        <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
+                            <span class="text-sm font-body font-medium text-charcoal pr-8">왜 중성세제가 아닌 약알칼리 세제인가요?</span>
+                            <span
+                                class="text-charcoal/30 text-lg font-light group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>
+                        </summary>
+                        <div class="pb-5 text-sm font-body text-charcoal/60 leading-relaxed">
+                            땀·피지 같은 생활 오염은 약알칼리 환경에서 더 잘 제거돼요. 라로에는 강력한 세정력과 부드러움 사이의 균형을 고려한 약알칼리 설계로 냄새를 강한 향으로 덮지 않고 먼저 깨끗하게 세탁합니다.
+                        </div>
+                    </details>
+
+                    <details class="border-b border-charcoal/10 group" open>
+                        <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
+                            <span class="text-sm font-body font-medium text-charcoal pr-8">아기 옷에도 사용 가능한가요?</span>
+                            <span
+                                class="text-charcoal/30 text-lg font-light group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>
+                        </summary>
+                        <div class="pb-5 text-sm font-body text-charcoal/60 leading-relaxed">
+                            네, 가능합니다. 라로에는 아기 옷 세탁을 고려해 피부에 가까운 중성 pH에 맞춘 약알칼리 포뮬라로, 매일 입는 옷도 부담 없이 세탁할 수 있어요.
+                        </div>
+                    </details>
+
+                    <details class="border-b border-charcoal/10 group" open>
+                        <summary class="flex items-center justify-between py-5 cursor-pointer list-none">
+                            <span class="text-sm font-body font-medium text-charcoal pr-8">펌프가 안 올라와요! 불량인가요?</span>
+                            <span
+                                class="text-charcoal/30 text-lg font-light group-open:rotate-45 transition-transform duration-300 shrink-0">+</span>
+                        </summary>
+                        <div class="pb-5 text-sm font-body text-charcoal/60 leading-relaxed">
+                            아닙니다. 펌프 하단의 흰색 부분을 잡고, 상단 펌프를 시계 반대 방향으로 돌려주세요. 잠금이 해제되면서 펌프가 위로 올라옵니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================================ -->
+        <!-- DISCLOSURE / 필수 표기사항 -->
+        <!-- ============================================ -->
+        <section class="py-16 px-8 border-t border-charcoal/5 bg-warmgray">
+            <div class="max-w-3xl mx-auto">
+                <p class="text-xs tracking-[0.6em] uppercase text-charcoal/30 mb-4 font-body text-center">Disclosure</p>
+                <h2 class="text-xl font-display text-center mb-12">안전확인대상생활화학제품 표시사항</h2>
+
+                <!-- 기본 정보 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 mb-10">
+                    <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                        <tbody>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 w-1/3"><span class="underline font-semibold text-charcoal">품목</span></td>
+                                <td class="py-2"><span class="underline font-semibold text-charcoal">세탁세제</span></td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">제품명</td>
+                                <td class="py-2">라로에 프리미엄 블랑향 아기 세탁세제</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">용도</td>
+                                <td class="py-2">섬유용, 섬유 얼룩제거용</td>
+                            </tr>
+
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">제형</td>
+                                <td class="py-2">액체형</td>
+                            </tr>
+
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">액성</td>
+                                <td class="py-2">원액(약알칼리성)</td>
+                            </tr>
+
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">용량</td>
+                                <td class="py-2">1L</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">제조연월</td>
+                                <td class="py-2">별도표기</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">유통기한</td>
+                                <td class="py-2">제조일로부터 24개월</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                        <tbody>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 w-1/3">신고번호</td>
+                                <td class="py-2 tracking-widest text-charcoal/80 font-medium"><span class="underline font-semibold text-charcoal">CB24-03-0028</span></td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">제조국</td>
+                                <td class="py-2">대한민국</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">제조자 주소 연락처</td>
+                                <td class="py-2">주식회사 제이엔케이코스 / 경상북도 칠곡군 약목면 복성20길 72-8, 에이동 / 070-4757-8399 </td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60">판매자 주소 연락처</td>
+                                <td class="py-2">라로에 laroe / 경기도 의왕시 백운호수로5길 15, 1층상가 104호(학의동) / 070-8287-2006 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mb-10 text-[11px] font-body text-charcoal/50">
+                    <span class="font-semibold text-charcoal/60 inline-block mr-2">고객상담실:</span> 070-8287-2006<br />
+                    <span class="font-semibold text-charcoal/60 inline-block mr-2 mt-1">품질보증기준:</span> 본 제품에 이상이 있을 경우
+                    공정거래위원회 고시 소비자 분쟁 해결 기준에 의거하여 교환 또는 보상을 받을 수 있습니다.
+                </div>
+
+                <!-- ▼ EDIT: Disclosure — 사용 물질 및 성분명 -->
+                <div class="mb-10">
+                    <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용 물질 및 성분명</p>
+                    <table class="w-full text-[11px] text-charcoal/50 font-body leading-loose">
+                        <tbody>
+                            <tr class="border-t border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 align-top w-1/5 whitespace-nowrap pr-4">
+                                    주요물질</td>
+                                <td class="py-2">라우릴글루코사이드 ; C10-16-알킬글리코사이드 , 로릴 에테르 황산 나트륨, 벤젠설폰산, 4-C10-1
+                                    3-sec-알킬유도체, 정제수</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">보존제</td>
+                                <td class="py-2">벤조산 나트륨</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">알레르기물질</td>
+                                <td class="py-2">알파-이소메칠이오논</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">계면활성제</td>
+                                <td class="py-2">라우릴글루코사이드 ; C10-16-알킬글리코사이드 (비이온계), 로릴 에테르 황산 나트륨(음이온계), 벤젠설폰산, 4-C10-1
+                                    3-sec-알킬유도체(음이온계), 카프릴릴/카프릴글루코사이드(비이온계), 코코-글루코사이드(비이온계)</td>
+                            </tr>
+                            <tr class="border-b border-charcoal/5">
+                                <td class="py-2 font-semibold text-charcoal/60 align-top pr-4">기타물질</td>
+                                <td class="py-2">1,3,4,6,7,8-헥사하이드로-4,6,6,7,8,8-헥사메틸사이클로펜타[g]-2-벤조피란, 리모넨, 수산화 나트륨</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ▼ EDIT: Disclosure — 사용 안내 (표준사용량, 사용방법) -->
+                <div class="mb-10">
+                    <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용 안내</p>
+                    <p class="text-[11px] font-body text-charcoal/50 leading-relaxed mb-4">
+                        <span
+                            class="font-semibold text-charcoal/60 border-b border-charcoal/10 pb-1 mb-2 inline-block">표준사용량</span><br />
+                        일반세탁기 (고 100L이상 70ml, 중 65~75L 50ml, 저 45~55L 30ml)<br />드럼세탁기 (대 드럼 2/3 7kg이상 40ml, 중 드럼
+                        1/2~2/3이하 5~7kg이하 30ml, 소 드럼 1/3이하 5kg이하 25ml)
+                    </p>
+                    <p class="text-[11px] font-body text-charcoal/50 leading-relaxed mb-4">
+                        <span
+                            class="font-semibold text-charcoal/60 border-b border-charcoal/10 pb-1 mb-2 inline-block">사용방법</span><br />
+                        세탁세제를 해당 표준사용량에 맞춰 세탁기의 세제투입구에 투여하세요.
+                    </p>
+                </div>
+
+                <!-- ▼ EDIT: Disclosure — 사용상 주의사항 -->
+                <div class="mb-10">
+                    <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">사용상 주의사항</p>
+                    <ol class="text-[11px] font-body text-charcoal/50 leading-loose list-decimal list-inside space-y-1">
+                        <li><span class="underline font-semibold text-charcoal">제품의 내용물을 분무기 등에 담아 분사하지 마시오.</span></li>
+                        <li>다른 제품과 섞어 사용할 경우 인체에 치명적인 손상을 입힐 수 있으니 섞어 사용하지 마시오.</li>
+                        <li>표시사항에 기재된 제품의 용도 외에는 사용하지 마시오.</li>
+                        <li>사람 또는 동물에 직접 사용(분사)하지 마시오.</li>
+                        <li>어린이 손에 닿지 않는 곳에 보관하시오.</li>
+                        <li>내용물을 마시거나, 내용물이 눈 또는 피부에 닿을 경우 인체에 심각한 손상을 입힐 수 있으니 주의하시오.</li>
+                        <li>밀폐된 공간에서 사용 시 환기를 충분히 하시오.</li>
+                        <li><span class="underline font-semibold text-charcoal">피부가 민감하거나 손상된 사람은 제품을 장기간 접촉하지 않도록 주의하시오.</span></li>
+                        <li>사용 후에는 밀폐하여 보관하시오.</li>
+                        <li>0℃이하에 보관 시 동결될 수 있으며 녹인 후 흔들어 사용하여 주시오.</li>
+                        <li>과다 사용 또는 장시간 의류에 담가 놓으실 경우 탈색 및 변색 등 세탁물에 손상이 갈 수 있으니 주의하시오.</li>
+                        <li>표준사용량에 맞춰 사용하여 주시오.</li>
+                    </ol>
+                </div>
+
+                <!-- ▼ EDIT: Disclosure — 응급처치 -->
+                <div class="mb-10">
+                    <p class="text-[10px] tracking-[0.3em] uppercase text-charcoal/30 font-body mb-4">응급처치</p>
+                    <ol class="text-[11px] font-body text-charcoal/50 leading-loose list-decimal list-inside space-y-1">
+                        <li>내용물을 먹거나 삼킨 경우 응급조치를 하고 즉시 의사와 상의하시오.</li>
+                        <li>눈에 들어갔을 때는 즉시 씻어내시오.</li>
+                        <li><span class="underline font-semibold text-charcoal">피부자극 반응 또는 붉은 반점이 나타나면 의학적 조치를 받으시오.</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================ -->
+        <footer class="py-8 px-8 text-center border-t border-charcoal/5">
+            <div class="flex items-center justify-center gap-6 mb-4">
+                <p class="text-lg font-display tracking-tight text-charcoal/55 italic">Candid. Minimal. Sustainable.</p>
+            </div>
+            <p class="text-[9px] text-charcoal/55 font-body tracking-[0.3em] uppercase">© 2026 LAROE All Rights
+                Reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
