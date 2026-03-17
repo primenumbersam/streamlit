@@ -1,1 +1,11 @@
 .venv
+.agents
+workflow.md
+commercial-samsoon/
+hero-liquid-gemini/
+hero-section-white/
+list-card-grid/
+product-brochure/
+product-detail-export/
+product-data.csv
+product-data.json
