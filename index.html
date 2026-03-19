@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +41,7 @@
             height: 100%;
             z-index: -1;
             opacity: 0.05;
-            background-image: 
+            background-image:
                 linear-gradient(var(--bauhaus-black) 1px, transparent 1px),
                 linear-gradient(90deg, var(--bauhaus-black) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -55,7 +56,7 @@
         }
 
         h1 {
-            font-size: 3vw;
+            font-size: 2vw;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -2px;
@@ -65,7 +66,7 @@
         .accent-box {
             width: 50px;
             height: 50px;
-            background-color: var(--bauhaus-red);
+            background-color: var(--bauhaus-blue);
         }
 
         .container {
@@ -116,24 +117,41 @@
             border: var(--border-thick) solid currentColor;
         }
 
-        .circle { border-radius: 50%; }
-        
+        .circle {
+            border-radius: 50%;
+        }
+
         /* Project List Styling */
         .project-list-container {
             list-style: none;
             margin-top: 1rem;
         }
+
         .project-list-container li {
             margin-bottom: 0.5rem;
             font-weight: 900;
         }
+
         .project-list-container a {
             color: inherit;
             text-decoration: none;
         }
-        .square { background-color: var(--bauhaus-blue); border: none; }
-        .triangle { 
-            width: 0; height: 0; 
+
+        .square {
+            background-color: var(--bauhaus-blue);
+            border: none;
+        }
+
+        .diamond {
+            width: 60px;
+            height: 60px;
+            background-color: var(--bauhaus-black);
+            transform: rotate(45deg);
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
             border-left: 30px solid transparent;
             border-right: 30px solid transparent;
             border-bottom: 60px solid var(--bauhaus-red);
@@ -149,60 +167,83 @@
         }
 
         @media (max-width: 768px) {
-            header { padding: 1.5rem 1rem; }
-            section { padding: 1.5rem 1rem; }
-            .container { grid-template-columns: 1fr; }
-            .hero, .experiment-card[style*="grid-column: span 3"] { 
-                grid-column: span 1 !important; 
+            header {
+                padding: 1.5rem 1rem;
             }
-            h1 { font-size: 12vw; line-height: 1.1; }
-            .experiment-card { min-height: 200px; }
-            .geometric-shape { width: 40px; height: 40px; bottom: 1rem; right: 1rem; }
+
+            section {
+                padding: 1.5rem 1rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .experiment-card[style*="grid-column: span 3"] {
+                grid-column: span 1 !important;
+            }
+
+            h1 {
+                font-size: 9vw;
+                line-height: 1.1;
+            }
+
+            .experiment-card {
+                min-height: 200px;
+            }
+
+            .geometric-shape {
+                width: 40px;
+                height: 40px;
+                bottom: 1rem;
+                right: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="grid-bg"></div>
-    
+
     <header>
-        <h1>Gitsam Studio<br><span style="color: var(--bauhaus-red);">Design Lab</span></h1>
+        <h1>Gitsam Studio<br><span style="color: var(--bauhaus-blue);">Design Lab</span></h1>
         <div class="accent-box"></div>
     </header>
 
     <main class="container">
 
-        <section class="experiment-card no-hover" style="grid-column: span 3; min-height: auto;">
-            <h3>UI Product-Detail</h3>
-            <ul id="dynamic-project-list" class="project-list-container">
-                <li>LOADING LOGS...</li>
-            </ul>
-        </section>
+
 
         <section class="hero">
-            <h2>QUANT HACKER / UI EXPERIMENTS</h2>
-            <p style="margin-top: 2rem; font-size: 1.2rem; max-width: 500px;">
-                Exploration of human-computer interaction using Google Labs tools and vanilla technologies.
-            </p>
+            <h2>UI Demos: Product-Detail</h3>
+                <ul id="dynamic-project-list" class="project-list-container">
+                    <li>LOADING LOGS...</li>
+                </ul>
         </section>
 
-        <section class="experiment-card" onclick="location.href='#';">
-            <h3>Google<br>Generative UI</h3>
-            <p>Experimenting with dynamic layouts via Gemini API.</p>
+        <section class="experiment-card" onclick="location.href='https://sites.gitsam.com/';">
+            <h3>UI Tools<br>Google Labs AI</h3>
+            <p>Experimenting with dynamic layouts via Gemini.</p>
             <div class="geometric-shape circle"></div>
         </section>
 
-        <section class="experiment-card" onclick="location.href='#';">
+        <section class="experiment-card" onclick="location.href='https://primenumbersam-altair.streamlit.app/';">
             <h3>Streamlit<br>Data Apps</h3>
-            <p>Rapidly prototyping interactive data dashboards and Python visualizations.</p>
+            <p>Rapidly prototyping interactive data dashboards with Python.</p>
             <div class="geometric-shape triangle"></div>
         </section>
 
         <section class="experiment-card" onclick="location.href='https://21st.dev';">
-            <h3>21st.dev<br>UI Library</h3>
-            <p>Implementing sophisticated design patterns and high-fidelity components.</p>
+            <h3>21st.dev<br>UI Snippets</h3>
+            <p>Implementing sophisticated design patterns components.</p>
             <div class="geometric-shape square"></div>
         </section>
-
+        <section class="experiment-card" onclick="location.href='https://kmong.com';">
+            <h3>크몽<br>UI 한국형</h3>
+            <p>비표준 비효율 통이미지 노가다형</p>
+            <div class="geometric-shape diamond"></div>
+        </section>
 
 
     </main>
@@ -215,15 +256,15 @@
     <script>
         async function fetchProjectLogs() {
             const listElement = document.getElementById('dynamic-project-list');
-            const targetDir = './product-detail/';
-            
+            const targetDir = './product-detail-export/';
+
             // NOTE: GitHub Pages does not allow directory scraping.
             // We explicitly list the experiment logs here.
             const htmlFiles = [
-                'laundry_detergent.html',
-                'multipurpose_cleaner.html',
                 'fabric_softener.html',
-                'dishwashing_liquid.html'
+                'laundry_detergent.html',
+                'dishwashing_liquid.html',
+                'multipurpose_cleaner.html'
             ];
 
             if (htmlFiles.length === 0) {
@@ -242,4 +283,5 @@
         window.addEventListener('DOMContentLoaded', fetchProjectLogs);
     </script>
 </body>
+
 </html>
