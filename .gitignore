@@ -1,6 +1,8 @@
 .venv
+.wrangler
 .agents
 workflow.md
+assets-pomelli/
 commercial-samsoon/
 hero-liquid-gemini/
 hero-section-white/
